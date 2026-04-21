@@ -6,21 +6,12 @@
     <title>APEX LUXE MOTORS - Luxury Performance Vehicles</title>
     <link rel="stylesheet" href="style.css">
 
-    <!-- jQuery FIRST -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- Your Script AFTER jQuery -->
-    <script>
-      $(document).ready(function () {
-        console.log("jQuery is working!");
-
-        $("a").click(function () {
-          console.log("Link clicked");
-        });
-      });
-    </script>
+    <!-- Google tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W447N7T5QN"></script>
 </head>
+
 <body>
+
     <header class="header">
         <div class="header-container">
             <a href="index.html" class="logo">APEX LUXE MOTORS</a>
@@ -45,7 +36,7 @@
         <section class="hero">
             <div class="hero-content fade-in-up">
                 <h1>THE ART OF PERFORMANCE</h1>
-                <p>Experience the most exclusive collection of luxury supercars and high-performance vehicles. Where engineering excellence meets automotive artistry.</p>
+                <p>Experience the most exclusive collection of luxury supercars and high-performance vehicles.</p>
                 <a href="inventory.html" class="btn">Book Test Drive</a>
             </div>
         </section>
@@ -53,66 +44,36 @@
         <section class="section">
             <div class="grid">
                 <h2 class="section-title">FEATURED COLLECTION</h2>
+
                 <div class="grid-3">
+
                     <div class="card">
-                        <img src="./Porsche 911 GT3.png" alt="Porsche 911 GT3">
+                        <img src="./Porsche 911 GT3.png">
                         <div class="card-content">
                             <h3>Porsche 911 GT3</h3>
-                            <p>4.0L Naturally Aspirated | 502 HP | Track-Focused Engineering</p>
-                            <div class="text-gold mb-1">$189,900</div>
-                            <a href="inventory.html" class="btn-outline btn">View Details</a>
+                            <p>502 HP | Track Beast</p>
+                            <div class="text-gold">$189,900</div>
                         </div>
                     </div>
-                    
+
                     <div class="card">
-                        <img src="./Ferrari F8 Tributo.png" alt="Ferrari F8 Tributo">
+                        <img src="./Ferrari F8 Tributo.png">
                         <div class="card-content">
-                            <h3>Ferrari F8 Tributo</h3>
-                            <p>3.9L Twin-Turbo V8 | 710 HP | Italian Masterpiece</p>
-                            <div class="text-gold mb-1">$274,900</div>
-                            <a href="inventory.html" class="btn-outline btn">View Details</a>
+                            <h3>Ferrari F8</h3>
+                            <p>710 HP | Italian Power</p>
+                            <div class="text-gold">$274,900</div>
                         </div>
                     </div>
-                    
+
                     <div class="card">
-                        <img src="./Lamborghini Huracán.png" alt="Lamborghini Huracán">
+                        <img src="./Lamborghini Huracán.png">
                         <div class="card-content">
                             <h3>Lamborghini Huracán</h3>
-                            <p>5.2L V10 | 630 HP | All-Wheel Drive Precision</p>
-                            <div class="text-gold mb-1">$248,900</div>
-                            <a href="inventory.html" class="btn-outline btn">View Details</a>
+                            <p>630 HP | AWD Monster</p>
+                            <div class="text-gold">$248,900</div>
                         </div>
                     </div>
-                    
-                    <div class="card">
-                        <img src="./McLaren 720S (2).png" alt="McLaren 720S">
-                        <div class="card-content">
-                            <h3>McLaren 720S</h3>
-                            <p>4.0L Twin-Turbo V8 | 710 HP | Carbon Fiber Monocoque</p>
-                            <div class="text-gold mb-1">$299,900</div>
-                            <a href="inventory.html" class="btn-outline btn">View Details</a>
-                        </div>
-                    </div>
-                    
-                    <div class="card">
-                        <img src="./Aston Martin DB11.png" alt="Aston Martin DB11">
-                        <div class="card-content">
-                            <h3>Aston Martin DB11</h3>
-                            <p>5.2L Twin-Turbo V12 | 630 HP | British Elegance</p>
-                            <div class="text-gold mb-1">$214,900</div>
-                            <a href="inventory.html" class="btn-outline btn">View Details</a>
-                        </div>
-                    </div>
-                    
-                    <div class="card">
-                        <img src="./Bentley Continental GT.png" alt="Bentley Continental GT">
-                        <div class="card-content">
-                            <h3>Bentley Continental GT</h3>
-                            <p>6.0L Twin-Turbo W12 | 626 HP | Handcrafted Luxury</p>
-                            <div class="text-gold mb-1">$231,900</div>
-                            <a href="inventory.html" class="btn-outline btn">View Details</a>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </section>
@@ -121,17 +82,36 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-brand">APEX LUXE MOTORS</div>
-            <p class="footer-tagline">Where Performance Meets Perfection</p>
-            <div class="social-links">
-                <a href="#" aria-label="Facebook">F</a>
-                <a href="#" aria-label="Instagram">I</a>
-                <a href="#" aria-label="Twitter">T</a>
-                <a href="#" aria-label="YouTube">Y</a>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2024 APEX LUXE MOTORS. All rights reserved. | Luxury Automotive Excellence</p>
-            </div>
+            <p>Where Performance Meets Perfection</p>
         </div>
     </footer>
+
+    <!-- ✅ jQuery FIRST -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- ✅ Your Script -->
+    <script>
+        $(document).ready(function () {
+
+            console.log("jQuery is working!");
+
+            // Smooth scroll
+            $("a").click(function (e) {
+                console.log("Link clicked");
+            });
+
+            // Card hover effect
+            $(".card").hover(
+                function () {
+                    $(this).css("transform", "scale(1.05)");
+                },
+                function () {
+                    $(this).css("transform", "scale(1)");
+                }
+            );
+
+        });
+    </script>
+
 </body>
 </html>
