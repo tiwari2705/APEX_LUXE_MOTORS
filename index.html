@@ -8,12 +8,15 @@
     <meta name="google-site-verification" content="MF-wL35h7T-wPWIFleSv6PNPy4WyYALM73bQx9iak00" />
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-W447N7T5QN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script>
+  $(document).ready(function () {
+    console.log("jQuery is working!");
 
-  gtag('config', 'G-W447N7T5QN');
+    // Example: smooth scroll
+    $("a").click(function (e) {
+      console.log("Link clicked");
+    });
+  });
 </script>
 </head>
 <body>
