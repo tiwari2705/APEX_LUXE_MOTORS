@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>APEX LUXE MOTORS - Luxury Performance Vehicles</title>
     <link rel="stylesheet" href="style.css">
-    <meta name="google-site-verification" content="MF-wL35h7T-wPWIFleSv6PNPy4WyYALM73bQx9iak00" />
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-W447N7T5QN"></script>
-    <script>
-  $(document).ready(function () {
-    console.log("jQuery is working!");
 
-    // Example: smooth scroll
-    $("a").click(function (e) {
-      console.log("Link clicked");
-    });
-  });
-</script>
+    <!-- jQuery FIRST -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Your Script AFTER jQuery -->
+    <script>
+      $(document).ready(function () {
+        console.log("jQuery is working!");
+
+        $("a").click(function () {
+          console.log("Link clicked");
+        });
+      });
+    </script>
 </head>
 <body>
     <header class="header">
