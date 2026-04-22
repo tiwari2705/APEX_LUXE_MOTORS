@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>APEX LUXE MOTORS - Luxury Performance Vehicles</title>
 
     <!-- SEO -->
@@ -12,7 +12,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Google Analytics (FIXED) -->
+    <!-- Google Analytics (Fixed Properly) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-W447N7T5QN"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -20,7 +20,6 @@
         gtag('js', new Date());
         gtag('config', 'G-W447N7T5QN');
     </script>
-
 </head>
 
 <body>
@@ -28,6 +27,7 @@
 <header class="header">
     <div class="header-container">
         <a href="index.html" class="logo">APEX LUXE MOTORS</a>
+
         <nav>
             <ul class="nav">
                 <li><a href="index.html">Home</a></li>
@@ -51,20 +51,24 @@
     <section class="hero">
         <div class="hero-content fade-in-up">
             <h1>THE ART OF PERFORMANCE</h1>
-            <p>Experience the most exclusive collection of luxury supercars.</p>
+            <p>Experience the most exclusive collection of luxury supercars and high-performance vehicles.</p>
             <a href="inventory.html" class="btn">Book Test Drive</a>
         </div>
     </section>
 
-    <!-- FEATURED -->
+    <!-- FEATURED SECTION -->
     <section class="section">
         <div class="grid">
             <h2 class="section-title">FEATURED COLLECTION</h2>
 
             <div class="grid-3">
 
+                <!-- CARD 1 -->
                 <div class="card">
-                    <img src="porsche.webp" alt="Porsche 911 GT3" loading="lazy" width="300" height="200">
+                    <img src="images/porsche-911-gt3.webp"
+                         alt="Porsche 911 GT3"
+                         loading="lazy"
+                         width="300" height="200">
                     <div class="card-content">
                         <h3>Porsche 911 GT3</h3>
                         <p>502 HP | Track Beast</p>
@@ -72,8 +76,12 @@
                     </div>
                 </div>
 
+                <!-- CARD 2 -->
                 <div class="card">
-                    <img src="ferrari.webp" alt="Ferrari F8" loading="lazy" width="300" height="200">
+                    <img src="images/ferrari-f8.webp"
+                         alt="Ferrari F8 Tributo"
+                         loading="lazy"
+                         width="300" height="200">
                     <div class="card-content">
                         <h3>Ferrari F8</h3>
                         <p>710 HP | Italian Power</p>
@@ -81,8 +89,12 @@
                     </div>
                 </div>
 
+                <!-- CARD 3 -->
                 <div class="card">
-                    <img src="lamborghini.webp" alt="Lamborghini Huracan" loading="lazy" width="300" height="200">
+                    <img src="images/lamborghini-huracan.webp"
+                         alt="Lamborghini Huracan"
+                         loading="lazy"
+                         width="300" height="200">
                     <div class="card-content">
                         <h3>Lamborghini Huracán</h3>
                         <p>630 HP | AWD Monster</p>
@@ -103,17 +115,20 @@
     </div>
 </footer>
 
-<!-- ✅ PURE JS (NO JQUERY) -->
-<script>
+<!-- ✅ Optimized JS (No jQuery, Deferred) -->
+<script defer>
 document.addEventListener("DOMContentLoaded", () => {
 
     console.log("JS Loaded");
 
-    // Card hover effect (CSS better, but JS version)
-    document.querySelectorAll(".card").forEach(card => {
+    // Card hover effect (optional, better in CSS)
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach(card => {
         card.addEventListener("mouseenter", () => {
             card.style.transform = "scale(1.05)";
         });
+
         card.addEventListener("mouseleave", () => {
             card.style.transform = "scale(1)";
         });
