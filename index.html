@@ -9,10 +9,85 @@
     <!-- SEO -->
     <meta name="description" content="Explore luxury supercars like Porsche, Ferrari, Lamborghini. Book test drives now.">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <!-- ✅ CRITICAL CSS (Above-the-Fold Only) -->
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
 
-    <!-- Google Analytics (Fixed Properly) -->
+        body {
+            font-family: Arial, sans-serif;
+            background:#000;
+            color:#fff;
+        }
+
+        /* HEADER */
+        .header {
+            position:fixed;
+            top:0;
+            width:100%;
+            background:rgba(0,0,0,0.9);
+            padding:10px 20px;
+            z-index:1000;
+        }
+
+        .header-container {
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .logo {
+            color:#fff;
+            text-decoration:none;
+            font-size:18px;
+            font-weight:bold;
+        }
+
+        /* NAV - MOBILE FIRST */
+        .nav {
+            display:flex;
+            gap:10px;
+            list-style:none;
+            overflow-x:auto;
+        }
+
+        .nav a {
+            color:#fff;
+            text-decoration:none;
+            font-size:14px;
+        }
+
+        /* HERO */
+        .hero {
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            padding:20px;
+        }
+
+        .hero h1 { font-size:28px; }
+        .hero p { margin:10px 0; font-size:14px; }
+
+        .btn {
+            padding:10px 20px;
+            background:gold;
+            color:#000;
+            text-decoration:none;
+        }
+
+        /* DESKTOP ENHANCEMENT */
+        @media (min-width:768px) {
+            .hero h1 { font-size:48px; }
+            .nav { justify-content:center; }
+        }
+    </style>
+
+    <!-- ✅ NON-BLOCKING FULL CSS -->
+    <link rel="preload" href="style.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="style.css"></noscript>
+
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-W447N7T5QN"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -20,6 +95,7 @@
         gtag('js', new Date());
         gtag('config', 'G-W447N7T5QN');
     </script>
+
 </head>
 
 <body>
@@ -30,7 +106,7 @@
 
         <nav>
             <ul class="nav">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="inventory.html">Inventory</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="ev-lab.html">EV Lab</a></li>
@@ -49,57 +125,42 @@
 
     <!-- HERO -->
     <section class="hero">
-        <div class="hero-content fade-in-up">
+        <div class="hero-content">
             <h1>THE ART OF PERFORMANCE</h1>
-            <p>Experience the most exclusive collection of luxury supercars and high-performance vehicles.</p>
+            <p>Experience the most exclusive collection of luxury supercars.</p>
             <a href="inventory.html" class="btn">Book Test Drive</a>
         </div>
     </section>
 
-    <!-- FEATURED SECTION -->
+    <!-- BELOW FOLD -->
     <section class="section">
         <div class="grid">
             <h2 class="section-title">FEATURED COLLECTION</h2>
 
             <div class="grid-3">
 
-                <!-- CARD 1 -->
                 <div class="card">
                     <img src="images/porsche-911-gt3.webp"
                          alt="Porsche 911 GT3"
                          loading="lazy"
                          width="300" height="200">
-                    <div class="card-content">
-                        <h3>Porsche 911 GT3</h3>
-                        <p>502 HP | Track Beast</p>
-                        <div class="text-gold">$189,900</div>
-                    </div>
+                    <h3>Porsche 911 GT3</h3>
                 </div>
 
-                <!-- CARD 2 -->
                 <div class="card">
                     <img src="images/ferrari-f8.webp"
-                         alt="Ferrari F8 Tributo"
+                         alt="Ferrari F8"
                          loading="lazy"
                          width="300" height="200">
-                    <div class="card-content">
-                        <h3>Ferrari F8</h3>
-                        <p>710 HP | Italian Power</p>
-                        <div class="text-gold">$274,900</div>
-                    </div>
+                    <h3>Ferrari F8</h3>
                 </div>
 
-                <!-- CARD 3 -->
                 <div class="card">
                     <img src="images/lamborghini-huracan.webp"
                          alt="Lamborghini Huracan"
                          loading="lazy"
                          width="300" height="200">
-                    <div class="card-content">
-                        <h3>Lamborghini Huracán</h3>
-                        <p>630 HP | AWD Monster</p>
-                        <div class="text-gold">$248,900</div>
-                    </div>
+                    <h3>Lamborghini Huracán</h3>
                 </div>
 
             </div>
@@ -115,25 +176,13 @@
     </div>
 </footer>
 
-<!-- ✅ Optimized JS (No jQuery, Deferred) -->
+<!-- ✅ LIGHTWEIGHT JS -->
 <script defer>
 document.addEventListener("DOMContentLoaded", () => {
-
-    console.log("JS Loaded");
-
-    // Card hover effect (optional, better in CSS)
-    const cards = document.querySelectorAll(".card");
-
-    cards.forEach(card => {
-        card.addEventListener("mouseenter", () => {
-            card.style.transform = "scale(1.05)";
-        });
-
-        card.addEventListener("mouseleave", () => {
-            card.style.transform = "scale(1)";
-        });
+    document.querySelectorAll(".card").forEach(card => {
+        card.addEventListener("mouseenter", () => card.style.transform="scale(1.05)");
+        card.addEventListener("mouseleave", () => card.style.transform="scale(1)");
     });
-
 });
 </script>
 
