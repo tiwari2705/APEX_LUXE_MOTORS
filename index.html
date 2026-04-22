@@ -1,188 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>APEX LUXE MOTORS - Luxury Performance Vehicles</title>
+<title>APEX LUXE MOTORS - Luxury Performance Vehicles</title>
+<meta name="description" content="Explore luxury supercars. Book test drives now.">
 
-    <!-- SEO -->
-    <meta name="description" content="Explore luxury supercars like Porsche, Ferrari, Lamborghini. Book test drives now.">
+<!-- 🔥 PRELOAD HERO IMAGE -->
+<link rel="preload" as="image" href="images/hero.webp">
 
-    <!-- ✅ CRITICAL CSS (Above-the-Fold Only) -->
-    <style>
-        * { margin:0; padding:0; box-sizing:border-box; }
+<!-- 🔥 CRITICAL CSS -->
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial;background:#000;color:#fff}
 
-        body {
-            font-family: Arial, sans-serif;
-            background:#000;
-            color:#fff;
-        }
+/* HEADER */
+.header{position:fixed;top:0;width:100%;background:#000;padding:10px 20px;z-index:1000}
+.header-container{display:flex;justify-content:space-between;align-items:center}
+.logo{color:#fff;text-decoration:none;font-weight:bold}
 
-        /* HEADER */
-        .header {
-            position:fixed;
-            top:0;
-            width:100%;
-            background:rgba(0,0,0,0.9);
-            padding:10px 20px;
-            z-index:1000;
-        }
+/* NAV */
+.nav{display:flex;gap:10px;list-style:none;overflow-x:auto}
+.nav a{color:#fff;text-decoration:none;font-size:14px}
 
-        .header-container {
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-        }
+/* HERO */
+.hero{position:relative;height:100vh;overflow:hidden}
+.hero img{width:100%;height:100%;object-fit:cover}
+.hero-content{
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  text-align:center
+}
+.hero h1{font-size:28px}
+.hero p{margin:10px 0}
+.btn{background:gold;color:black;padding:10px 20px;text-decoration:none}
 
-        .logo {
-            color:#fff;
-            text-decoration:none;
-            font-size:18px;
-            font-weight:bold;
-        }
+/* DESKTOP */
+@media(min-width:768px){
+.hero h1{font-size:48px}
+.nav{justify-content:center}
+}
+</style>
 
-        /* NAV - MOBILE FIRST */
-        .nav {
-            display:flex;
-            gap:10px;
-            list-style:none;
-            overflow-x:auto;
-        }
+<!-- ✅ NON-BLOCKING CSS -->
+<link rel="preload" href="style.css" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="style.css"></noscript>
 
-        .nav a {
-            color:#fff;
-            text-decoration:none;
-            font-size:14px;
-        }
-
-        /* HERO */
-        .hero {
-            height:100vh;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            padding:20px;
-        }
-
-        .hero h1 { font-size:28px; }
-        .hero p { margin:10px 0; font-size:14px; }
-
-        .btn {
-            padding:10px 20px;
-            background:gold;
-            color:#000;
-            text-decoration:none;
-        }
-
-        /* DESKTOP ENHANCEMENT */
-        @media (min-width:768px) {
-            .hero h1 { font-size:48px; }
-            .nav { justify-content:center; }
-        }
-    </style>
-
-    <!-- ✅ NON-BLOCKING FULL CSS -->
-    <link rel="preload" href="style.css" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="style.css"></noscript>
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W447N7T5QN"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-W447N7T5QN');
-    </script>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W447N7T5QN"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-W447N7T5QN');
+</script>
 
 </head>
 
 <body>
 
 <header class="header">
-    <div class="header-container">
-        <a href="index.html" class="logo">APEX LUXE MOTORS</a>
+<div class="header-container">
+<a href="#" class="logo">APEX LUXE MOTORS</a>
 
-        <nav>
-            <ul class="nav">
-                <li><a href="#">Home</a></li>
-                <li><a href="inventory.html">Inventory</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="ev-lab.html">EV Lab</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="financing.html">Financing</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="reviews.html">Reviews</a></li>
-                <li><a href="careers.html">Careers</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
+<nav>
+<ul class="nav">
+<li><a href="#">Home</a></li>
+<li><a href="inventory.html">Inventory</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="ev-lab.html">EV Lab</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="financing.html">Financing</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="reviews.html">Reviews</a></li>
+<li><a href="careers.html">Careers</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</div>
 </header>
 
-<main class="main-content">
+<main>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>THE ART OF PERFORMANCE</h1>
-            <p>Experience the most exclusive collection of luxury supercars.</p>
-            <a href="inventory.html" class="btn">Book Test Drive</a>
-        </div>
-    </section>
+<!-- 🔥 HERO (LCP FIXED) -->
+<section class="hero">
+<img src="images/hero.webp"
+     alt="Luxury Car"
+     fetchpriority="high"
+     decoding="async"
+     width="1200" height="700">
 
-    <!-- BELOW FOLD -->
-    <section class="section">
-        <div class="grid">
-            <h2 class="section-title">FEATURED COLLECTION</h2>
+<div class="hero-content">
+<h1>THE ART OF PERFORMANCE</h1>
+<p>Experience luxury supercars.</p>
+<a href="inventory.html" class="btn">Book Test Drive</a>
+</div>
+</section>
 
-            <div class="grid-3">
+<!-- BELOW FOLD -->
+<section class="section">
+<div class="grid">
+<h2>FEATURED COLLECTION</h2>
 
-                <div class="card">
-                    <img src="images/porsche-911-gt3.webp"
-                         alt="Porsche 911 GT3"
-                         loading="lazy"
-                         width="300" height="200">
-                    <h3>Porsche 911 GT3</h3>
-                </div>
+<div class="grid-3">
 
-                <div class="card">
-                    <img src="images/ferrari-f8.webp"
-                         alt="Ferrari F8"
-                         loading="lazy"
-                         width="300" height="200">
-                    <h3>Ferrari F8</h3>
-                </div>
+<div class="card">
+<img src="images/porsche.webp" loading="lazy" width="300" height="200">
+<h3>Porsche 911 GT3</h3>
+</div>
 
-                <div class="card">
-                    <img src="images/lamborghini-huracan.webp"
-                         alt="Lamborghini Huracan"
-                         loading="lazy"
-                         width="300" height="200">
-                    <h3>Lamborghini Huracán</h3>
-                </div>
+<div class="card">
+<img src="images/ferrari.webp" loading="lazy" width="300" height="200">
+<h3>Ferrari F8</h3>
+</div>
 
-            </div>
-        </div>
-    </section>
+<div class="card">
+<img src="images/lamborghini.webp" loading="lazy" width="300" height="200">
+<h3>Lamborghini Huracán</h3>
+</div>
+
+</div>
+</div>
+</section>
 
 </main>
 
 <footer class="footer">
-    <div class="footer-content">
-        <div class="footer-brand">APEX LUXE MOTORS</div>
-        <p>Where Performance Meets Perfection</p>
-    </div>
+<p>APEX LUXE MOTORS</p>
 </footer>
 
-<!-- ✅ LIGHTWEIGHT JS -->
+<!-- ✅ LIGHT JS -->
 <script defer>
-document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll(".card").forEach(card => {
-        card.addEventListener("mouseenter", () => card.style.transform="scale(1.05)");
-        card.addEventListener("mouseleave", () => card.style.transform="scale(1)");
-    });
+document.querySelectorAll(".card").forEach(c=>{
+c.onmouseenter=()=>c.style.transform="scale(1.05)";
+c.onmouseleave=()=>c.style.transform="scale(1)";
 });
 </script>
 
