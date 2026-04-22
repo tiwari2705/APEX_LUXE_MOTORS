@@ -163,6 +163,23 @@ c.onmouseenter=()=>c.style.transform="scale(1.05)";
 c.onmouseleave=()=>c.style.transform="scale(1)";
 });
 </script>
+     <script defer>
+document.querySelectorAll(".card").forEach(c=>{
+  c.onmouseenter=()=>c.style.transform="scale(1.05)";
+  c.onmouseleave=()=>c.style.transform="scale(1)";
+});
+</script>
+
+<!-- ✅ ADD SERVICE WORKER HERE -->
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/sw.js")
+      .then(() => console.log("Service Worker Registered"))
+      .catch(err => console.log("SW Error:", err));
+  });
+}
+</script>
 
 </body>
 </html>
