@@ -170,24 +170,6 @@ document.querySelectorAll(".card").forEach(c=>{
 });
 </script>
 
-<!-- ✅ CLEAN JS (ONLY ONCE) -->
-<script>
-document.querySelectorAll(".card").forEach(c=>{
-  c.onmouseenter=()=>c.style.transform="scale(1.05)";
-  c.onmouseleave=()=>c.style.transform="scale(1)";
-});
-</script>
-
-<!-- ✅ SERVICE WORKER (CORRECT FOR GITHUB PAGES) -->
-<script>
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker.register("/APEX_LUXE_MOTORS/sw.js")
-      .then(reg => console.log("SW Registered:", reg))
-      .catch(err => console.error("SW Error:", err));
-  });
-}
-</script>
 
 </body>
 </html>
