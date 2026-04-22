@@ -3,115 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>APEX LUXE MOTORS - Luxury Performance Vehicles</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Explore luxury supercars like Porsche, Ferrari, Lamborghini. Book test drives now.">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Google tag -->
+    <!-- Google Analytics (FIXED) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-W447N7T5QN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-W447N7T5QN');
+    </script>
+
 </head>
 
 <body>
 
-    <header class="header">
-        <div class="header-container">
-            <a href="index.html" class="logo">APEX LUXE MOTORS</a>
-            <nav>
-                <ul class="nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="inventory.html">Inventory</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="ev-lab.html">EV Lab</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="financing.html">Financing</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="reviews.html">Reviews</a></li>
-                    <li><a href="careers.html">Careers</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+<header class="header">
+    <div class="header-container">
+        <a href="index.html" class="logo">APEX LUXE MOTORS</a>
+        <nav>
+            <ul class="nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="inventory.html">Inventory</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="ev-lab.html">EV Lab</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="financing.html">Financing</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="main-content">
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content fade-in-up">
+            <h1>THE ART OF PERFORMANCE</h1>
+            <p>Experience the most exclusive collection of luxury supercars.</p>
+            <a href="inventory.html" class="btn">Book Test Drive</a>
         </div>
-    </header>
+    </section>
 
-    <main class="main-content">
-        <section class="hero">
-            <div class="hero-content fade-in-up">
-                <h1>THE ART OF PERFORMANCE</h1>
-                <p>Experience the most exclusive collection of luxury supercars and high-performance vehicles.</p>
-                <a href="inventory.html" class="btn">Book Test Drive</a>
-            </div>
-        </section>
+    <!-- FEATURED -->
+    <section class="section">
+        <div class="grid">
+            <h2 class="section-title">FEATURED COLLECTION</h2>
 
-        <section class="section">
-            <div class="grid">
-                <h2 class="section-title">FEATURED COLLECTION</h2>
+            <div class="grid-3">
 
-                <div class="grid-3">
-
-                    <div class="card">
-                        <img src="./Porsche 911 GT3.png">
-                        <div class="card-content">
-                            <h3>Porsche 911 GT3</h3>
-                            <p>502 HP | Track Beast</p>
-                            <div class="text-gold">$189,900</div>
-                        </div>
+                <div class="card">
+                    <img src="porsche.webp" alt="Porsche 911 GT3" loading="lazy" width="300" height="200">
+                    <div class="card-content">
+                        <h3>Porsche 911 GT3</h3>
+                        <p>502 HP | Track Beast</p>
+                        <div class="text-gold">$189,900</div>
                     </div>
-
-                    <div class="card">
-                        <img src="./Ferrari F8 Tributo.png">
-                        <div class="card-content">
-                            <h3>Ferrari F8</h3>
-                            <p>710 HP | Italian Power</p>
-                            <div class="text-gold">$274,900</div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <img src="./Lamborghini Huracán.png">
-                        <div class="card-content">
-                            <h3>Lamborghini Huracán</h3>
-                            <p>630 HP | AWD Monster</p>
-                            <div class="text-gold">$248,900</div>
-                        </div>
-                    </div>
-
                 </div>
+
+                <div class="card">
+                    <img src="ferrari.webp" alt="Ferrari F8" loading="lazy" width="300" height="200">
+                    <div class="card-content">
+                        <h3>Ferrari F8</h3>
+                        <p>710 HP | Italian Power</p>
+                        <div class="text-gold">$274,900</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="lamborghini.webp" alt="Lamborghini Huracan" loading="lazy" width="300" height="200">
+                    <div class="card-content">
+                        <h3>Lamborghini Huracán</h3>
+                        <p>630 HP | AWD Monster</p>
+                        <div class="text-gold">$248,900</div>
+                    </div>
+                </div>
+
             </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-brand">APEX LUXE MOTORS</div>
-            <p>Where Performance Meets Perfection</p>
         </div>
-    </footer>
+    </section>
 
-    <!-- ✅ jQuery FIRST -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</main>
 
-    <!-- ✅ Your Script -->
-    <script>
-        $(document).ready(function () {
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-brand">APEX LUXE MOTORS</div>
+        <p>Where Performance Meets Perfection</p>
+    </div>
+</footer>
 
-            console.log("jQuery is working!");
+<!-- ✅ PURE JS (NO JQUERY) -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
 
-            // Smooth scroll
-            $("a").click(function (e) {
-                console.log("Link clicked");
-            });
+    console.log("JS Loaded");
 
-            // Card hover effect
-            $(".card").hover(
-                function () {
-                    $(this).css("transform", "scale(1.05)");
-                },
-                function () {
-                    $(this).css("transform", "scale(1)");
-                }
-            );
-
+    // Card hover effect (CSS better, but JS version)
+    document.querySelectorAll(".card").forEach(card => {
+        card.addEventListener("mouseenter", () => {
+            card.style.transform = "scale(1.05)";
         });
-    </script>
+        card.addEventListener("mouseleave", () => {
+            card.style.transform = "scale(1)";
+        });
+    });
+
+});
+</script>
 
 </body>
 </html>
